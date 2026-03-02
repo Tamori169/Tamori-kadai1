@@ -1,0 +1,162 @@
+@extends('layouts.app')
+
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+@endsection
+
+@section('content')
+<div class="contact-form__content">
+    <div class="contact-form__heading">
+        <h2>Contact</h2>
+    </div>
+    <form class="form" action="">
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">
+                    お名前
+                </span>
+                <span class="form__label--required">
+                    ※
+                </span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__item">
+                    <input class="form__item-input" type="text" name="last_name" placeholder="例: 山田" >
+                </div>
+                <div class="form__item">
+                    <input class="form__item-input" type="text" name="first_name" placeholder="例: 太郎" >
+                </div>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">
+                    性別
+                </span>
+                <span class="form__label--required">
+                    ※
+                </span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__item">
+                    <label class="form__item-radio">
+                        <input type="radio" name="gender" value="1">男性
+                    </label>
+                </div>
+                <div class="form__item">
+                    <label class="form__item-radio">
+                        <input type="radio" name="gender" value="2">女性
+                    </label>
+                </div>
+                <div class="form__item">
+                    <label class="form__item-radio">
+                        <input type="radio" name="gender" value="3">その他
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">
+                    メールアドレス
+                </span>
+                <span class="form__label--required">
+                    ※
+                </span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__item">
+                    <input class="form__item-input" type="email" name="email" placeholder="例: test@example.com">
+                </div>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">
+                    電話番号
+                </span>
+                <span class="form__label--required">
+                    ※
+                </span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__item">
+                    <input class="form__item-input" type="text" name="tel1" placeholder="例: 080" >
+                </div>
+                -
+                <div class="form__item">
+                    <input class="form__item-input" type="text" name="tel2" placeholder="例: 1234" >
+                </div>
+                -
+                <div class="form__item">
+                    <input class="form__item-input" type="text" name="tel3" placeholder="例: 5678" >
+                </div>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">
+                    住所
+                </span>
+                <span class="form__label--required">
+                    ※
+                </span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__item">
+                    <input class="form__item-input" type="text" name="address" placeholder="例: 東京都渋谷区千駄ヶ谷1-2-3">
+                </div>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">
+                    建物名
+                </span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__item">
+                    <input class="form__item-input" type="text" name="building" placeholder="例: 千駄ヶ谷マンション101">
+                </div>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">
+                    お問い合わせの種類
+                </span>
+                <span class="form__label--required">
+                    ※
+                </span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__item">
+                    <select class="form__item-select" name="content" value="選択してください">
+                        @foreach($contact_items as $contact_item)
+                        <option value="{{ $contact_item->id }}">{{ $contact_item->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">
+                    お問い合わせ内容
+                </span>
+                <span class="form__label--required">
+                    ※
+                </span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__item">
+                    <textarea class="form__item-textarea" name="detail" placeholder="例: お問い合わせ内容をご記載ください"></textarea>
+                </div>
+            </div>
+            <div class="form__button">
+                <button class="form__button-submit" type="submit">確認画面</button>
+            </div>
+        </div>
+    </form>
+</div>
+@endsection

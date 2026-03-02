@@ -1,0 +1,23 @@
+* {
+    color: #CD853F;
+    font-family: "Playfair", serif;
+}
+
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid;
+    margin: 0 auto;
+    /* ボーダーの場所は仮置き。.header__innerとこっちのどっちか。反映見て決定 */
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
