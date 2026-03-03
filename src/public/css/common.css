@@ -1,23 +1,27 @@
 * {
-    color: #CD853F;
-    font-family: "Playfair", serif;
+    color: #8A796F;
+    font-family:
+            'Playfair Display',
+            'Noto Sans JP',
+            'Hiragino Sans',
+            'Yu Gothic',
+            sans-serif;
 }
 
 .header {
     background-color: #fff;
-    border-bottom: 1px solid;
-    margin: 0 auto;
-    /* ボーダーの場所は仮置き。.header__innerとこっちのどっちか。反映見て決定 */
+    border-bottom: 0.5px solid rgba(138, 121, 111, 0.4);
 }
 
 .header__inner {
-    margin: 0 auto;
     padding: 20px 15px;
     max-width: 1230px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .header__logo {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     text-decoration: none;
 }
