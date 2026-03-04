@@ -26,4 +26,17 @@ class Contact extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    const GENDER_LABELS = [
+        1 => '男性',
+        2 => '女性',
+        3 => 'その他',
+    ];
+
+    public static function genderLabel($value)
+    {
+        return self::GENDER_LABELS[$value] ?? '不明';
+    }
+
+    
 }

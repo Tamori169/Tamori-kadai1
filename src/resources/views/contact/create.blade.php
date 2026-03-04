@@ -9,7 +9,8 @@
     <div class="contact-form__heading">
         <h2>Contact</h2>
     </div>
-    <form class="form" action="">
+    <form class="form" action="/confirm" method="post">
+        @csrf
         <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">
@@ -159,7 +160,6 @@
         </div>
         <div class="form__button">
             <button class="form__button-submit" type="submit">確認画面</button>
-        </div>
         </div>
     </form>
 </div>
