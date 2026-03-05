@@ -24,7 +24,9 @@
                     <input class="form__item-input" type="text" name="name" placeholder="例: 山田 太郎" />
                 </div>
                 <div class="form__error">
-                <!-- エラーメッセージ用 -->
+                @error('name')
+                {{ $message }}
+                @enderror
                 </div>
             </div>
         </div>
@@ -37,7 +39,9 @@
                     <input class="form__item-input" type="text" name="email" placeholder="例: test@example.com" />
                 </div>
                 <div class="form__error">
-                <!-- エラーメッセージ用 -->
+                @error('email')
+                {{ $message }}
+                @enderror
                 </div>
             </div>
         </div>
@@ -50,7 +54,9 @@
                     <input class="form__item-input" type="password" name="password" placeholder="例: coachtech1106" />
                 </div>
                 <div class="form__error">
-                <!-- エラーメッセージ用 -->
+                @error('password')
+                {{ $message }}
+                @enderror
                 </div>
             </div>
         </div>

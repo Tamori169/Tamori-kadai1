@@ -21,7 +21,8 @@ Route::post('/thanks',[ContactController::class,'store'])
 ->name('thanks.store');
 Route::post('/',[ContactController::class,'back'])
 ->name('contact.back');
-Route::get('/register',[AuthController::class,'index']);
-Route::post('/register',[AuthController::class,'store']);
-Route::get('/login',[AuthController::class,'login']);
-Route::post('/login',[AuthController::class,'authenticate']);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
+});
