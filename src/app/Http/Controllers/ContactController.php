@@ -12,7 +12,6 @@ class ContactController extends Controller
     public function index()
     {
         $categories = Category::all();
-        
         return view('contact.create', compact('categories'));
     }
 
@@ -32,7 +31,6 @@ class ContactController extends Controller
         $data['tel'] = $tel;
 
         Contact::create($data);
-
         return view('contact.thanks');
     }
 

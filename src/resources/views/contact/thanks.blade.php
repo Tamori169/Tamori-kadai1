@@ -12,15 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="thanks-message">
-        <div class="thanks-message__background">Thank you</div>
+    <div class="thanks-page">
+    <!-- 背景文字 -->
+    <div class="thanks-page__background-text">Thank you</div>
 
-        <div class="thanks-message__header">
-            <h1 class="thanks-message__logo">お問い合わせありがとうございました</h1>
-        </div>
-        <div class="button-home">
-            <a class="button-home__a" href="/">HOME</a>
-        </div>
+    <header class="thanks-page__header">
+        <h1 class="thanks-page__title">お問い合わせありがとうございました</h1>
+    </header>
+
+    <div class="thanks-page__actions">
+        <a class="thanks-page__button" href="/">HOME</a>
     </div>
+</div>
 </body>
 </html>

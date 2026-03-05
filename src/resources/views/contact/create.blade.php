@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="{{ asset('css/create.css') }}">
 @endsection
 
+@section('nav')
+@endsection
+
 @section('content')
 <div class="contact-form__content">
     <div class="contact-form__heading">

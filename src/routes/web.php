@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,7 @@ Route::post('/thanks',[ContactController::class,'store'])
 ->name('thanks.store');
 Route::post('/',[ContactController::class,'back'])
 ->name('contact.back');
+Route::get('/register',[AuthController::class,'index']);
+Route::post('/register',[AuthController::class,'store']);
+Route::get('/login',[AuthController::class,'login']);
+Route::post('/login',[AuthController::class,'authenticate']);

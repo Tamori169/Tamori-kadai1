@@ -15,7 +15,16 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a class="header__logo" href="/">FashionablyLate</a>
+            <div class="header-utilities">
+                <a class="header__logo" href="/">FashionablyLate</a>
+                <nav>
+                    <ul class="header-nav">
+                        <li class="header-nav__item">
+                        @yield('nav')
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <main>
