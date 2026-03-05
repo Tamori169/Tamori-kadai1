@@ -13,11 +13,13 @@
 </head>
 <body>
     <div class="thanks-message">
+        <div class="thanks-message__background">Thank you</div>
+
         <div class="thanks-message__header">
             <h1 class="thanks-message__logo">お問い合わせありがとうございました</h1>
         </div>
-        <div>
-            <a class="link__create" href="/">HOME</a>
+        <div class="button-home">
+            <a class="button-home__a" href="/">HOME</a>
         </div>
     </div>
 </body>

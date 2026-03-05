@@ -8,8 +8,8 @@
         sans-serif;
 }
 
-html,
-body {
+body,
+html {
     height: 100%;
     margin: 0;
 }
@@ -17,7 +17,56 @@ body {
 body {
     display: flex;
     justify-content: center;
-    /* 横中央 */
     align-items: center;
-    /* 縦中央 */
+    background-color: #fff;
+}
+
+.thanks-message {
+    position: relative;
+    /* 背景文字を重ねるため */
+    text-align: center;
+    padding: 20px 40px;
+}
+
+/* 背景の大文字 */
+.thanks-message__background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12rem;
+    /* 好きな大きさに調整 */
+    color: rgba(138, 121, 111, 0.05);
+    /* 薄い文字 */
+    white-space: nowrap;
+    z-index: 0;
+    /* 背景として下に配置 */
+    pointer-events: none;
+    /* クリック不可 */
+}
+
+.thanks-message__header {
+    position: relative;
+    z-index: 1;
+    /* 背景より前に表示 */
+}
+
+.button-home {
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+    /* 背景より前に表示 */
+}
+
+.button-home__a {
+    display: inline-block;
+    padding: 10px;
+    width: 120px;
+    height: 20px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background: #8A796F;
+    color: #fff;
+    cursor: pointer;
 }
