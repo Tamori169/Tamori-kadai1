@@ -16,6 +16,7 @@ body{
     width: 60%;
     height: 500px;
     margin: 0 auto;
+    padding: 25px;
     background-color: #fff;
     border: solid 0.5px #8A796F;
     border-radius: 5px;
@@ -26,6 +27,7 @@ body{
 
 .form__group{
     width: 60%;
+    height: 60px;
     margin: 0 auto;
 }
 
@@ -38,8 +40,6 @@ body{
     margin-top: 30px;
 }
 
-
-
 .form__item-input{
     margin-top: 10px;
     width: 65%;
@@ -51,8 +51,18 @@ body{
     border-radius: 3px;
 }
 
+.form__error{
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+.form__error-text{
+    color: red ;
+}
+
 .form__button{
-    margin: 25px 0;
+    margin: 20px 0;
 }
 
 .form__button-submit{

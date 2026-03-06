@@ -24,7 +24,9 @@
                     <input class="form__item-input" type="text" name="email" placeholder="例: test@example.com" />
                 </div>
                 <div class="form__error">
-                <!-- エラーメッセージ用 -->
+                    @error('email')
+                    <span class="form__error-text">{{ $message }}</span>
+                    @enderror
                 </div>
             </div>
         </div>
@@ -37,7 +39,9 @@
                     <input class="form__item-input" type="password" name="password" placeholder="例: coachtech1106" />
                 </div>
                 <div class="form__error">
-                <!-- エラーメッセージ用 -->
+                    @error('password')
+                    <span class="form__error-text">{{ $message }}</span>
+                    @enderror
                 </div>
             </div>
         </div>

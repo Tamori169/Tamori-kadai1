@@ -24,9 +24,9 @@
                     <input class="form__item-input" type="text" name="name" placeholder="例: 山田 太郎" />
                 </div>
                 <div class="form__error">
-                @error('name')
-                {{ $message }}
-                @enderror
+                    @error('name')
+                    <span class="form__error-text">{{ $message }}</span>
+                    @enderror
                 </div>
             </div>
         </div>
@@ -39,9 +39,9 @@
                     <input class="form__item-input" type="text" name="email" placeholder="例: test@example.com" />
                 </div>
                 <div class="form__error">
-                @error('email')
-                {{ $message }}
-                @enderror
+                    @error('email')
+                    <span class="form__error-text">{{ $message }}</span>
+                    @enderror
                 </div>
             </div>
         </div>
@@ -54,9 +54,9 @@
                     <input class="form__item-input" type="password" name="password" placeholder="例: coachtech1106" />
                 </div>
                 <div class="form__error">
-                @error('password')
-                {{ $message }}
-                @enderror
+                    @error('password')
+                    <span class="form__error-text">{{ $message }}</span>
+                    @enderror
                 </div>
             </div>
         </div>

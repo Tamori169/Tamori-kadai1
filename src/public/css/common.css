@@ -10,6 +10,7 @@
 
 .header {
     border-bottom: 0.5px solid rgba(138, 121, 111, 0.4);
+    background-color: #fff;
 }
 
 .header-utilities {
@@ -20,7 +21,6 @@
 
 .header__inner {
     padding: 20px 15px;
-    background-color: #fff;
     max-width: 1230px;
     margin: 0 auto;
     text-align: center;

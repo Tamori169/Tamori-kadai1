@@ -1,4 +1,4 @@
-body{
+body {
     background-color: rgba(138, 121, 111, 0.2);
 }
 
@@ -14,8 +14,9 @@ body{
 
 .form {
     width: 60%;
-    height: 450px;
+    height: 400px;
     margin: 0 auto;
+    padding: 25px;
     background-color: #fff;
     border: solid 0.5px #8A796F;
     border-radius: 5px;
@@ -26,6 +27,7 @@ body{
 
 .form__group {
     width: 60%;
+    height: 40px;
     margin: 0 auto;
 }
 
@@ -35,10 +37,8 @@ body{
 }
 
 .form__group-title:first-child {
-    margin-top: 50px;
+    margin-top: 40px;
 }
-
-
 
 .form__item-input {
     margin-top: 10px;
@@ -51,8 +51,18 @@ body{
     border-radius: 3px;
 }
 
+.form__error {
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+.form__error-text {
+    color: red;
+}
+
 .form__button {
-    margin: 50px 0;
+    margin: 20px 0;
 }
 
 .form__button-submit {

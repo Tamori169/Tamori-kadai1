@@ -1,0 +1,24 @@
+.admin-dashboard {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1230px;
+}
+
+.admin-dashboard__heading {
+    margin: 30px 0;
+}
+
+.admin-filter {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.admin-dashboard__list-header {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
