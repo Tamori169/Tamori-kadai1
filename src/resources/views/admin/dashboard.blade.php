@@ -18,22 +18,22 @@
     </div>
     <form class="admin-filter" >
         <div class="admin-filter__item">
-            <input class="admin-filter__item-input" type="text" name="" placeholder="名前やメールアドレスを入力してください" />
+            <input class="admin-filter__input--name" type="text" name="" placeholder="名前やメールアドレスを入力してください" />
         </div>
         <div class="admin-filter__item">
-            <select class="admin-filter__item-select" name="gender">
+            <select class="admin-filter__select--gender" name="gender">
                 <option value="">性別</option>
                 <!-- genderの選択肢を追加 -->
             </select>
         </div>
         <div class="admin-filter__item">
-            <select class="admin-filter__item-select" name="content">
+            <select class="admin-filter__select--content" name="content">
                 <option value="">お問い合わせの種類</option>
                 <!-- contentの選択肢を追加 -->
             </select>
         </div>
         <div class="admin-filter__item">
-            <input class="admin-filter__item-input" type="date" name="date" placeholder="年/月/日" />
+            <input class="admin-filter__input--date" type="date" name="date" placeholder="年/月/日" />
         </div>
         <div class="admin-filter__button">
             <button class="admin-filter__button--search" type="submit">検索</button>

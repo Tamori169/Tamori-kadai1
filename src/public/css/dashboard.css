@@ -10,15 +10,81 @@
 
 .admin-filter {
     display: flex;
-    text-align: center;
+    align-items: center;
     margin: 0 auto;
-    width: 80%;
+    width: 85%;
     justify-content: space-between;
 }
 
+.admin-filter__input--name {
+    width: 300px;
+    padding: 10px 10px;
+    text-align: center;
+    border: solid 0.5px #8A796F;
+    outline: none;
+    background-color: rgb(238, 238, 238,0.5);
+}
+
+.admin-filter__select--gender {
+    width: 80px;
+    padding: 10px 10px;
+    text-align: center;
+    border: solid 0.5px #8A796F;
+    outline: none;
+    background-color: rgb(238, 238, 238, 0.8);
+}
+
+.admin-filter__select--content {
+    width: 200px;
+    padding: 10px 10px;
+    text-align: center;
+    border: solid 0.5px #8A796F;
+    outline: none;
+    background-color: rgb(238, 238, 238, 0.8);
+}
+
+.admin-filter__input--date {
+    width: 120px;
+    padding: 10px 10px;
+    text-align: center;
+    border: solid 0.5px #8A796F;
+    outline: none;
+    background-color: rgb(238, 238, 238, 0.8);
+}
+
+.admin-filter__button--search {
+    padding: 10px;
+    width: 90px;
+    border: none;
+    background: #8A796F;
+    color: #fff;
+    cursor: pointer;
+}
+
+.admin-filter__button--reset {
+    padding: 10px;
+    width: 90px;
+    border: none;
+    background: rgb(216, 190, 158);
+    color: #fff;
+    cursor: pointer;
+}
+
+.admin-dashboard__list{
+    margin-top: 30px;
+}
+
 .admin-dashboard__list-header {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+}
+
+.admin-table {
+    margin: 0 auto;
+}
+
+input::placeholder {
+    color: rgba(138, 121, 111, 0.7);
 }
