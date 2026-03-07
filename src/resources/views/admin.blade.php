@@ -52,9 +52,13 @@
     </form>
     <div class="admin-dashboard__list">
         <div class="admin-dashboard__list-header">
-            <div class="admin-dashboard__button">
+            <form class="admin-dashboard__button" action="/export" method="get">
+                <input type="hidden" name="keyword" value="{{ request('keyword') }}">
+                <input type="hidden" name="gender" value="{{ request('gender') }}">
+                <input type="hidden" name="category_id" value="{{ request('category_id') }}">
+                <input type="hidden" name="date" value="{{ request('date') }}">
                 <button class="admin-dashboard__button--export" type="submit">エクスポート</button>
-            </div>
+            </form>
             <div class="admin-dashboard__pagination">
                 {{ $contacts->appends(request()->query())->links() }}
             </div>
@@ -62,11 +66,11 @@
         <div class="admin-table">
             <table class="admin-table__inner">
                 <tr class="admin-table__row">
-                    <td class="admin-table__header">お名前</td>
-                    <td class="admin-table__header">性別</td>
-                    <td class="admin-table__header">メールアドレス</td>
-                    <td class="admin-table__header">お問い合わせの種類</td>
-                    <td class="admin-table__header"></td>
+                    <td class="admin-table__header--name">お名前</td>
+                    <td class="admin-table__header--gender">性別</td>
+                    <td class="admin-table__header--email">メールアドレス</td>
+                    <td class="admin-table__header--content">お問い合わせの種類</td>
+                    <td class="admin-table__header--detail"></td>
                 </tr>
                 @foreach ($contacts as $contact)
                 <tr class="admin-table__row">

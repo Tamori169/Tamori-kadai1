@@ -128,17 +128,52 @@
     margin: 0 auto;
     width: 86%;
     border: solid 0.5px #8A796F;
+    border-collapse: collapse;
 }
 
 .admin-table__row {
     height: 50px;
-    border-bottom: solid 0.5px #8A796F;
 }
 
-.admin-table__header {
+.admin-table__header--name,
+.admin-table__header--gender,
+.admin-table__header--email,
+.admin-table__header--content,
+.admin-table__header--detail {
     background: #8A796F;
     color: white;
+}
+
+.admin-table__header--name {
+    width: 200px;
+}
+
+.admin-table__header--gender {
+    width: 100px;
+}
+
+.admin-table__header--email {
+    width: 300px;
+}
+
+.admin-table__header--content {
+    width: 250px;
+}
+
+.admin-table__text {
+    border-bottom: 0.5px solid #8A796F;
     margin: 0;
+}
+
+.admin-table__detail {
+    width: 70px;
+    height: 30px;
+    padding: 5px 10px;
+    text-align: center;
+    border: solid 0.5px #8A796F;
+    outline: none;
+    color: rgba(138, 121, 111, 0.5);
+    background-color: rgb(238, 238, 238, 0.8);
 }
 
 input::placeholder {

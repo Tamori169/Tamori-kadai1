@@ -17,6 +17,7 @@
 .confirm-table__inner {
     width: 100%;
     border: 0.5px solid #8A796F;
+    border-collapse: collapse;
 }
 
 .confirm-table__header {
@@ -36,6 +37,10 @@
     width: 100%;
     outline: none;
     border: none;
+}
+
+.confirm-table__row:last-child td {
+    border-bottom: none;
 }
 
 .confirm-form__button-group{

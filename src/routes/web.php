@@ -27,4 +27,6 @@ Route::middleware(['auth'])->group(function () {
     ->name('admin.search');
     Route::get('/reset', [AdminController::class,'reset'])
     ->name('admin.reset');
+    Route::get('/export', [AdminController::class,'export'])
+    ->name('admin.export');
 });
