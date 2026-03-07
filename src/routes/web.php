@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +22,9 @@ Route::post('/thanks',[ContactController::class,'store'])
 Route::post('/',[ContactController::class,'back'])
 ->name('contact.back');
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    });
+    Route::get('/admin', [AdminController::class,'index']);
+    Route::get('/search', [AdminController::class,'search'])
+    ->name('admin.search');
+    Route::get('/reset', [AdminController::class,'reset'])
+    ->name('admin.reset');
 });

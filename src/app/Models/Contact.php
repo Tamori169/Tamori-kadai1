@@ -38,5 +38,29 @@ class Contact extends Model
         return self::GENDER_LABELS[$value] ?? '不明';
     }
 
-    
+    public function scopeSearch($query, $request)
+    {
+        $keyword = $request->keyword;
+        $gender = $request->gender;
+        $category_id = $request->category_id;
+        $date = $request->date;
+
+        if ($keyword && $gender && $category_id && $date) {
+
+        $query->where(function ($q) use ($keyword) {
+            $q->where('first_name', 'like', "%{$keyword}%")
+            ->orWhere('last_name', 'like', "%{$keyword}%")
+            ->orWhere('email', 'like', "%{$keyword}%");
+        });
+
+        $query->where('gender', $gender);
+
+        $query->where('category_id', $category_id);
+
+        $query->whereDate('created_at', $date);
+        }
+
+        return $query;
+    }
+
 }

@@ -81,8 +81,64 @@
     justify-content: space-between;
 }
 
+.admin-dashboard__button--export {
+    width: 120px;
+    height: 35px;
+    padding: 5px 10px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: #eee;
+}
+
+.admin-dashboard__pagination {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.admin-dashboard__pagination a,
+.admin-dashboard__pagination span {
+    padding: 6px 12px;
+    border: 0.5px solid #8A796F;
+    text-decoration: none;
+    color: #8A796F;
+}
+
+.admin-dashboard__pagination span.relative.inline-flex {
+    background: #8A796F;
+    color: white;
+}
+
+.admin-dashboard__pagination .inline-flex>* {
+    margin-left: -1px;
+}
+
+.admin-dashboard__pagination svg {
+    width: 16px;
+    height: 16px;
+}
+
 .admin-table {
+    margin-top: 30px;
+}
+
+.admin-table__inner {
+    text-align: center;
     margin: 0 auto;
+    width: 86%;
+    border: solid 0.5px #8A796F;
+}
+
+.admin-table__row {
+    height: 50px;
+    border-bottom: solid 0.5px #8A796F;
+}
+
+.admin-table__header {
+    background: #8A796F;
+    color: white;
+    margin: 0;
 }
 
 input::placeholder {
