@@ -19,7 +19,7 @@
     <form class="admin-filter" method="get">
         @csrf
         <div class="admin-filter__item">
-            <input class="admin-filter__input--name" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください"
+            <input class="admin-filter__input--text" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください"
             value="{{ request('keyword') }}"/>
         </div>
         <div class="admin-filter__item">
@@ -74,19 +74,105 @@
                 </tr>
                 @foreach ($contacts as $contact)
                 <tr class="admin-table__row">
-                        <td class="admin-table__text">{{ $contact['last_name'] }} {{ $contact['first_name'] }}</td>
-                        <td class="admin-table__text">
-                            {{ \App\Models\Contact::genderLabel($contact['gender']) }}
-                        </td>
-                        <td class="admin-table__text">{{ $contact['email'] }}</td>
-                        <td class="admin-table__text">{{ $contact->category->content }}</td>
-                        <td class="admin-table__text">
-                            <button class="admin-table__detail" type="submit">詳細</button>
-                        </td>
+                    <td class="admin-table__text">{{ $contact['last_name'] }} {{ $contact['first_name'] }}</td>
+                    <td class="admin-table__text">
+                        {{ \App\Models\Contact::genderLabel($contact['gender']) }}
+                    </td>
+                    <td class="admin-table__text">{{ $contact['email'] }}</td>
+                    <td class="admin-table__text">{{ $contact->category->content }}</td>
+                    <td class="admin-table__text">
+                        <button class="admin-table__detail"
+                        data-id="{{ $contact['id'] }}"
+                        data-name="{{ $contact['last_name']}} {{ $contact['first_name'] }}"
+                        data-gender="{{ \App\Models\Contact::genderLabel($contact['gender']) }}"
+                        data-email="{{ $contact['email'] }}"
+                        data-tel="{{ $contact['tel'] }}"
+                        data-address="{{ $contact['address'] }}"
+                        data-building="{{ $contact['building'] }}"
+                        data-category="{{ $contact->category->content }}"
+                        data-detail="{{ $contact['detail'] }}"
+                        >詳細</button>
+                    </td>
                 </tr>
                 @endforeach
             </table>
         </div>
     </div>
 </div>
+
+<!-- 以下、モーダル表示 -->
+
+<div id="detail-modal" class="modal">
+    <div class="modal-content">
+        <div>
+            <span id="modal-close">×</span>
+        </div>
+        <div class="modal-item">
+            <span class=modal-title>名前</span>
+            <span id="modal-name"></span>
+        </div>
+        <div class="modal-item">
+            <span class=modal-title>性別</span>
+            <span id="modal-gender"></span>
+        </div>
+        <div class="modal-item">
+            <span class=modal-title>メールアドレス</span>
+            <span id="modal-email"></span>
+        </div>
+        <div class="modal-item">
+            <span class=modal-title>電話番号</span>
+            <span id="modal-tel"></span>
+        </div>
+        <div class="modal-item">
+            <span class=modal-title>住所</span>
+            <span id="modal-address"></span>
+        </div>
+        <div class="modal-item">
+            <span class=modal-title>建物名</span>
+            <span id="modal-building"></span>
+        </div>
+        <div class="modal-item">
+            <span class=modal-title>お問い合わせの種類</span>
+            <span id="modal-category"></span>
+        </div>
+        <div class="modal-item">
+            <span class=modal-title>お問い合わせ内容</span>
+            <span id="modal-detail"></span>
+        </div>
+        <form class="delete-form" action="/delete" method="post">
+            @csrf
+            @method('DELETE')
+            <input type="hidden" name="id" id="delete-contact-id">
+            <button class="delete-form__button">削除</button>
+        </form>
+    </div>
+</div>
+
+<script>
+const modal = document.getElementById("detail-modal");
+
+document.querySelectorAll(".admin-table__detail").forEach(button => {
+
+    button.addEventListener("click", function(){
+
+        document.getElementById("modal-name").textContent = this.dataset.name;
+        document.getElementById("modal-gender").textContent = this.dataset.gender;
+        document.getElementById("modal-email").textContent = this.dataset.email;
+        document.getElementById("modal-tel").textContent = this.dataset.tel;
+        document.getElementById("modal-address").textContent = this.dataset.address;
+        document.getElementById("modal-building").textContent = this.dataset.building;
+        document.getElementById("modal-category").textContent = this.dataset.category;
+        document.getElementById("modal-detail").textContent = this.dataset.detail;
+        document.getElementById("delete-contact-id").value = this.dataset.id;
+
+        modal.style.display = "block";
+
+    });
+
+});
+
+document.getElementById("modal-close").addEventListener("click", function(){
+    modal.style.display = "none";
+});
+</script>
 @endsection

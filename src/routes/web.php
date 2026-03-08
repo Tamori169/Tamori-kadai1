@@ -29,4 +29,5 @@ Route::middleware(['auth'])->group(function () {
     ->name('admin.reset');
     Route::get('/export', [AdminController::class,'export'])
     ->name('admin.export');
+    Route::delete('/delete', [ContactController::class, 'destroy']);
 });

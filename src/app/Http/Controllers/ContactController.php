@@ -38,4 +38,10 @@ class ContactController extends Controller
     {
         return redirect('/')->withInput();
     }
+
+    public function destroy(Request $request)
+    {
+        Contact::find($request->id)->delete();
+        return redirect('/admin');
+    }
 }

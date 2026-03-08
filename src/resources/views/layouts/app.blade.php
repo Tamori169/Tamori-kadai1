@@ -15,17 +15,15 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <div class="header-utilities">
-                <a class="header__logo" href="/">FashionablyLate</a>
-                <nav>
-                    <ul class="header-nav">
-                        <li class="header-nav__item">
-                        @yield('nav')
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <h1>FashionablyLate</h1>
         </div>
+        <nav>
+            <ul class="header-nav">
+                <li class="header-nav__item">
+                    @yield('nav')
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         @yield('content')

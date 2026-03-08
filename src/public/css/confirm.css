@@ -16,6 +16,8 @@
 
 .confirm-table__inner {
     width: 100%;
+    text-align: center;
+    margin: 0 auto;
     border: 0.5px solid #8A796F;
     border-collapse: collapse;
 }
