@@ -2,6 +2,12 @@ body{
     background-color: rgba(138, 121, 111, 0.2);
 }
 
+.login-link {
+    appearance: none;
+    color: inherit;
+    text-decoration: none;
+}
+
 .register-form__content{
     margin: 0 auto;
     text-align: center;

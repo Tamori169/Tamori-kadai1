@@ -11,23 +11,37 @@
 .header {
     border-bottom: 0.5px solid rgba(138, 121, 111, 0.4);
     background-color: #fff;
-}
-
-.header-utilities {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header__inner {
     padding: 20px 15px;
-    max-width: 1230px;
-    margin: 0 auto;
-    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-collapse: collapse;
 }
 
-.header__logo {
+.header-logo {
     font-size: 32px;
     font-weight: bold;
+}
+
+.header-nav {
+    padding-right: 20px;
+    position: absolute;
+    right: 50px;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid rgba(138, 121, 111, 0.4);
+    background-color: #eee;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.header-nav__button {
+    color: rgba(138, 121, 111, 0.4);
+    appearance: none;
     text-decoration: none;
 }

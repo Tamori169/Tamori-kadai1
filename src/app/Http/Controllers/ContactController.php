@@ -15,7 +15,7 @@ class ContactController extends Controller
         return view('contact.create', compact('categories'));
     }
 
-    public function confirm(Request $request)
+    public function confirm(ContactCreateRequest $request)
     {
         $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1', 'tel2', 'tel3', 'address', 'building', 'category_id', 'detail']);
         $category = Category::find($request->category_id);

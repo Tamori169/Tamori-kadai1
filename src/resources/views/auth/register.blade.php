@@ -5,7 +5,7 @@
 @endsection
 
 @section('nav')
-<a href="/login">login</a>
+<a class="login-link" href="/login">login</a>
 @endsection
 
 @section('content')

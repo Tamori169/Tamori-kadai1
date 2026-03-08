@@ -5,7 +5,7 @@
 @endsection
 
 @section('nav')
-<a href="/register">register</a>
+<a class="register-link" href="/register">register</a>
 @endsection
 
 @section('content')

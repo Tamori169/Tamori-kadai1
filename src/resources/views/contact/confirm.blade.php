@@ -4,9 +4,6 @@
 <link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
 @endsection
 
-@section('nav')
-@endsection
-
 @section('content')
 <div class="confirm__content">
     <div class="confirm__heading">

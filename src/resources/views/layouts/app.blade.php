@@ -14,16 +14,12 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__inner">
-            <h1>FashionablyLate</h1>
-        </div>
-        <nav>
-            <ul class="header-nav">
-                <li class="header-nav__item">
-                    @yield('nav')
-                </li>
-            </ul>
+        <h1 class="header-logo">FashionablyLate</h1>
+        @if (View::hasSection('nav'))
+        <nav class="header-nav">
+            @yield('nav')
         </nav>
+        @endif
     </header>
     <main>
         @yield('content')
