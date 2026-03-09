@@ -47,7 +47,7 @@ php artisan db:seed
 ```
 
 ## ER図
-![ER図](ER.drawio.png)
+![ER図](ER.drawio.png)  
 usersテーブルはログイン認証用のテーブルのため、他テーブルとのリレーションなし。
 
 ## URL
