@@ -1,7 +1,9 @@
 # アプリケーション名
+
 FashionablyLate
 
 ## アプリケーション概要
+
 ```
 ユーザーからの問い合わせフォーム管理用アプリケーション
 - ユーザー：問い合わせ内容を入力後、送信することができる
@@ -11,31 +13,45 @@ FashionablyLate
 ## 環境構築
 
 ### 1. リポジトリをクローン
+
 git clone https://github.com/Tamori169/Tamori-kadai1.git  
-cd FashionablyLate
+cd Tamori-kadai1
 
 ### 2. Dockerコンテナを作成・起動
+
 docker-compose up -d --build
 
 ### 3. PHPコンテナに入る
+
 docker-compose exec php bash
 
 ### 4. Composerパッケージをインストール
+
 composer install
 
 ### 5. .envファイルを作成
+
 cp .env.example .env
 
 ### 6. アプリケーションキーを作成
+
 php artisan key:generate
 
 ### 7. データベースマイグレーション
+
 php artisan migrate
 
 ### 8. シーディング実行
+
 php artisan db:seed
 
+### "The stream or file could not be opened"エラーが発生した場合
+
+srcディレクトリにあるstorageディレクトリに権限を設定
+chmod -R 777 storage
+
 ## 使用技術(実行環境)
+
 ```
 - PHP 8.1.34
 - Laravel 8.83.8
@@ -46,10 +62,12 @@ php artisan db:seed
 ```
 
 ## ER図
+
 ![ER図](ER.drawio.png)  
 usersテーブルはログイン認証用のテーブルのため、他テーブルとのリレーションなし。
 
 ## URL
+
 ```
 - お問い合わせ画面：http://localhost
 - ユーザー登録画面：http://localhost/register
@@ -57,4 +75,3 @@ usersテーブルはログイン認証用のテーブルのため、他テーブ
 - 管理者画面：http://localhost/admin (ログイン後アクセス可能)
 - phpMyAdmin：http://localhost:8080
 ```
-

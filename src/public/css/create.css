@@ -68,6 +68,10 @@
     background-color: #eee;
 }
 
+.form__item-select {
+    height: 40px;
+}
+
 .form__item--name {
     width:27%;
 }
@@ -97,7 +101,6 @@
 input[type="radio"] {
     accent-color: #8A796F;
     outline: none;
-    /* 元のまま */
 }
 
 .form__item--tel-group {
@@ -116,7 +119,7 @@ input[type="radio"] {
 }
 
 .form__button {
-    margin-left: 270px;
+    margin-left: 330px;
 }
 
 .form__button-submit {
@@ -132,7 +135,7 @@ input[type="radio"] {
 
 .error-form {
     color: red;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 6px;
     min-height: 18px;
     text-align: left;
