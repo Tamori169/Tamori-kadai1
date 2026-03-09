@@ -28,11 +28,11 @@ class ContactCreateRequest extends FormRequest
             'first_name' => ['required', 'string', 'max:8'],
             'gender' => ['required'],
             'email' => ['required', 'email', 'max:255'],
-            'tel1' => ['required', 'string', 'digits_between:1,5'],
-            'tel2' => ['required', 'string', 'digits_between:1,5'],
-            'tel3' => ['required', 'string', 'digits_between:1,5'],
+            'tel1' => ['required', 'regex:/^[0-9]+$/', 'digits_between:1,5'],
+            'tel2' => ['required', 'regex:/^[0-9]+$/', 'digits_between:1,5'],
+            'tel3' => ['required', 'regex:/^[0-9]+$/', 'digits_between:1,5'],
             'address' => ['required', 'string', 'max:255'],
-            'content' => ['required', 'exists:categories,id'],
+            'category_id' => ['required', 'exists:categories,id'],
             'detail' => ['required', 'string', 'max:120'],
         ];
     }
@@ -47,14 +47,18 @@ class ContactCreateRequest extends FormRequest
             'email.email' => 'メールアドレスはメール形式で入力してください',
             'tel1.required' => '電話番号を入力してください',
             'tel1.digits_between' => '電話番号は5桁まで数字で入力してください',
+            'tel1.regex' => '電話番号は半角英数字で入力してください',
             'tel2.required' => '電話番号を入力してください',
             'tel2.digits_between' => '電話番号は5桁まで数字で入力してください',
+            'tel2.regex' => '電話番号は半角英数字で入力してください',
             'tel3.required' => '電話番号を入力してください',
             'tel3.digits_between' => '電話番号は5桁まで数字で入力してください',
+            'tel3.regex' => '電話番号は半角英数字で入力してください',
             'address.required' => '住所を入力してください',
-            'content.required' => 'お問い合わせの種類を選択してください',
+            'category_id.required' => 'お問い合わせの種類を選択してください',
             'detail.required' => 'お問い合わせ内容を入力してください',
             'detail.max' => 'お問い合わせ内容は120文字以内で入力してください',
         ];
     }
+
 }
