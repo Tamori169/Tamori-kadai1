@@ -61,7 +61,18 @@
 .form__item-textarea {
     width: 100%;
     max-width: 500px;
+    padding: 12px 12px 12px 30px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: #eee;
+}
+
+.form__item-input--tel {
+    width: 100%;
+    max-width: 500px;
     padding: 12px;
+    text-align: center;
     border-radius: 3px;
     border: none;
     outline: none;
@@ -70,6 +81,24 @@
 
 .form__item-select {
     height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form__item--content {
+    position: relative;
+}
+
+.form__item--content::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
+    color: #8A796F;
 }
 
 .form__item--name {
@@ -106,7 +135,7 @@ input[type="radio"] {
 .form__item--tel-group {
     display: flex;
     align-items: center;
-    gap: 26.5px;
+    gap: 32px;
 }
 
 .form__item--tel {
@@ -135,7 +164,7 @@ input[type="radio"] {
 
 .error-form {
     color: red;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 6px;
     min-height: 18px;
     text-align: left;

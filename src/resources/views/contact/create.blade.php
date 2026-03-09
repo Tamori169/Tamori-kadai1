@@ -59,22 +59,19 @@
                 <div class="form__group-content">
                     <div class="form__item--gender">
                         <label class="form__item-radio">
-                            <input type="radio" name="gender" value="1"
-                                @checked(old('gender', $data['gender'] ?? '') == 1)>
+                            <input type="radio" name="gender" value="1" {{ old('gender') == '1' ? 'checked' : '' }}>
                             男性
                         </label>
                     </div>
                     <div class="form__item--gender">
                         <label class="form__item-radio">
-                            <input type="radio" name="gender" value="2"
-                                @checked(old('gender', $data['gender'] ?? '') == 2)>
+                            <input type="radio" name="gender" value="2" {{ old('gender') == '2' ? 'checked' : '' }})>
                             女性
                         </label>
                     </div>
                     <div class="form__item--gender">
                         <label class="form__item-radio">
-                            <input type="radio" name="gender" value="3"
-                                @checked(old('gender', $data['gender'] ?? '') == 3)>
+                            <input type="radio" name="gender" value="3" {{ old('gender') == '3' ? 'checked' : '' }}>
                             その他
                         </label>
                     </div>
@@ -119,7 +116,7 @@
                 <div class="form__item--tel-group">
                     <div class="form__item-wrapper">
                         <div class="form__item--tel">
-                            <input class="form__item-input"
+                            <input class="form__item-input--tel"
                                 type="text"
                                 name="tel1"
                                 placeholder="080"
@@ -134,7 +131,7 @@
                     <span class="form__item--tel-separator">-</span>
                     <div class="form__item-wrapper">
                         <div class="form__item--tel">
-                            <input class="form__item-input"
+                            <input class="form__item-input--tel"
                                 type="text"
                                 name="tel2"
                                 placeholder="1234"
@@ -149,7 +146,7 @@
                     <span class="form__item--tel-separator">-</span>
                     <div class="form__item-wrapper">
                         <div class="form__item--tel">
-                            <input class="form__item-input"
+                            <input class="form__item-input--tel"
                                 type="text"
                                 name="tel3"
                                 placeholder="5678"
