@@ -14,7 +14,7 @@
 @section('content')
 <div class="admin-dashboard">
     <div class="admin-dashboard__heading">
-        <h2>Admin</h2>
+        <h1>Admin</h1>
     </div>
     <form class="admin-filter" method="get">
         @csrf
@@ -25,6 +25,7 @@
         <div class="admin-filter__item">
             <select class="admin-filter__select--gender" name="gender">
                 <option value="" >性別</option>
+                <option value="" {{ request('gender') == '' ? 'selected' : '' }}>全て</option>
                 <option value="1" {{ request('gender') == 1 ? 'selected' : '' }}>男性</option>
                 <option value="2" {{ request('gender') == 2 ? 'selected' : '' }}>女性</option>
                 <option value="3" {{ request('gender') == 3 ? 'selected' : '' }}>その他</option>

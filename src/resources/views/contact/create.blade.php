@@ -8,7 +8,7 @@
 
 <div class="contact-form__content">
     <div class="contact-form__heading">
-        <h2>Contact</h2>
+        <h1>Contact</h1>
     </div>
 
     <form class="form" action="/confirm" method="post">
@@ -53,9 +53,6 @@
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-wrapper">
-                @php
-                $gender = old('gender', $data['gender'] ?? '');
-                @endphp
                 <div class="form__group-content">
                     <div class="form__item--gender">
                         <label class="form__item-radio">
@@ -65,7 +62,7 @@
                     </div>
                     <div class="form__item--gender">
                         <label class="form__item-radio">
-                            <input type="radio" name="gender" value="2" {{ old('gender') == '2' ? 'checked' : '' }})>
+                            <input type="radio" name="gender" value="2" {{ old('gender') == '2' ? 'checked' : '' }}>
                             女性
                         </label>
                     </div>
