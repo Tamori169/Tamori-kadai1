@@ -14,7 +14,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-logo" link="../">FashionablyLate</div>
+        <div class="header-logo">FashionablyLate</div>
         @if (View::hasSection('nav'))
         <nav class="header-nav">
             @yield('nav')
