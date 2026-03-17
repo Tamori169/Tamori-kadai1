@@ -27,6 +27,11 @@ class Contact extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function channels()
+    {
+    return $this->belongsToMany(Channel::class);
+    }
+
     const GENDER_LABELS = [
         1 => '男性',
         2 => '女性',

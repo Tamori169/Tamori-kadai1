@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ContactCreateRequest;
 use App\Models\Category;
 use App\Models\Contact;
+use App\Models\Channel;
 
 class ContactController extends Controller
 {
