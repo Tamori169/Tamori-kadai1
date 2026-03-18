@@ -270,6 +270,20 @@
                 </div>
             </div>
         </div>
+        <!-- 画像アップロード -->
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">画像アップロード</span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__item--upload">
+                    <input class="form__item-file"
+                        type="file"
+                        name="img_path"
+                        value="{{ old('building', $data['building'] ?? '') }}">
+                </div>
+            </div>
+        </div>
         <!-- ボタン -->
         <div class="form__button">
             <button class="form__button-submit" type="submit">

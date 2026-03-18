@@ -77,7 +77,8 @@
 .form__item--email,
 .form__item--address,
 .form__item--building,
-.form__item--detail {
+.form__item--detail,
+.form__item--upload {
     width: 100%;
 }
 
@@ -118,9 +119,22 @@
 input[type="radio"] {
     accent-color: #8A796F;
     outline: none;
+    cursor: pointer;
 }
 
 input[type="checkbox"] {
     accent-color: #8A796F;
     outline: none;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    color: #8A796F;
+    background-color: #eee;
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 45%;
+    cursor: pointer;
+    margin-right: 20px;
 }

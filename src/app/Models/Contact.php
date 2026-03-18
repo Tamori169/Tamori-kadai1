@@ -17,7 +17,8 @@ class Contact extends Model
         'address',
         'building',
         'detail',
-        'category_id'
+        'category_id',
+        'img_path'
     ];
 
     use HasFactory;
