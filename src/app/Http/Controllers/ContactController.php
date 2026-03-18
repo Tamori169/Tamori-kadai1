@@ -22,7 +22,6 @@ class ContactController extends Controller
         $category = Category::find($request->category_id);
         $channels = Channel::whereIn('id', $request->channel_id ?? [])->get();
 
-
         return view('contact.confirm', compact('contact', 'category', 'channels'));
     }
 

@@ -235,7 +235,7 @@
         <!-- 当社を知ったきっかけ -->
         <div class="form__group">
             <div class="form__group-title">
-                <span class="form__label--item">どこで知りましたか？</span></br>
+                <span class="form__label--item">当社を知ったきっかけ</span></br>
                 <span class="form__label--item">（複数選択可）</span>
             </div>
             <div class="form__group-wrapper">
