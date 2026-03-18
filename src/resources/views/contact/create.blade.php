@@ -232,6 +232,44 @@
                 </div>
             </div>
         </div>
+        <!-- 当社を知ったきっかけ -->
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">どこで知りましたか？</span></br>
+                <span class="form__label--item">（複数選択可）</span>
+            </div>
+            <div class="form__group-wrapper">
+                <div class="form__group-content">
+                    <label class="form__item--channel">
+                        <input type="checkbox" name="channel_id[]" value="1"
+                        {{ in_array('1', old('channel_id', [])) ? 'checked' : '' }}>
+                        自社サイト
+                    </label>
+                    <label class="form__item--channel">
+                        <input type="checkbox" name="channel_id[]" value="2"
+                        {{ in_array('2', old('channel_id', [])) ? 'checked' : '' }}>
+                        検索エンジン
+                    </label>
+                    <label class="form__item--channel">
+                        <input type="checkbox" name="channel_id[]" value="3"
+                        {{ in_array('3', old('channel_id', [])) ? 'checked' : '' }}>
+                        SNS
+                    </label>
+                </div>
+                <div class="form__group-content">
+                    <label class="form__item--channel">
+                        <input type="checkbox" name="channel_id[]" value="4"
+                        {{ in_array('4', old('channel_id', [])) ? 'checked' : '' }}>
+                        テレビ・新聞
+                    </label>
+                    <label class="form__item--channel">
+                        <input type="checkbox" name="channel_id[]" value="5"
+                        {{ in_array('5', old('channel_id', [])) ? 'checked' : '' }}>
+                        友人・知人
+                    </label>
+                </div>
+            </div>
+        </div>
         <!-- ボタン -->
         <div class="form__button">
             <button class="form__button-submit" type="submit">

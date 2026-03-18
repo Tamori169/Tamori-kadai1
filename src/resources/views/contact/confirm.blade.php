@@ -73,6 +73,21 @@
                         <input type="hidden" name="detail" value="{{ $contact['detail'] }}" />
                     </td>
                 </tr>
+                <tr class="confirm-table__row">
+                    <td class="confirm-table__header">当社を知ったきっかけ</td>
+                    <td class="confirm-table__text">
+                        <ul class="confirm-table__list">
+                            @forelse($channels as $channel)
+                                <li class="confirm-table__item">{{ $channel->content }}</li>
+                            @empty
+                                <li class="confirm-table__item">未選択</li>
+                            @endforelse
+                        </ul>
+                        @foreach($contact['channel_id'] ?? [] as $id)
+                            <input type="hidden" name="channel_id[]" value="{{ $id }}">
+                        @endforeach
+                    </td>
+                </tr>
             </table>
         </div>
         <div class="confirm-form__button-group">

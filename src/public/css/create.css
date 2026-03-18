@@ -69,6 +69,11 @@
     color: #8A796F;
 }
 
+.form__item--channel {
+    gap: 30px;
+    margin-top: 10px;
+}
+
 .form__item--email,
 .form__item--address,
 .form__item--building,
@@ -115,3 +120,7 @@ input[type="radio"] {
     outline: none;
 }
 
+input[type="checkbox"] {
+    accent-color: #8A796F;
+    outline: none;
+}

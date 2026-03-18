@@ -29,7 +29,7 @@ class Contact extends Model
 
     public function channels()
     {
-    return $this->belongsToMany(Channel::class);
+        return $this->belongsToMany(Channel::class);
     }
 
     const GENDER_LABELS = [

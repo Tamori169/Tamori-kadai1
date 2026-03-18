@@ -18,10 +18,12 @@ class ContactController extends Controller
 
     public function confirm(ContactCreateRequest $request)
     {
-        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1', 'tel2', 'tel3', 'address', 'building', 'category_id', 'detail']);
+        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1', 'tel2', 'tel3', 'address', 'building', 'category_id', 'detail', 'channel_id']);
         $category = Category::find($request->category_id);
+        $channels = Channel::whereIn('id', $request->channel_id ?? [])->get();
 
-        return view('contact.confirm', compact('contact', 'category'));
+
+        return view('contact.confirm', compact('contact', 'category', 'channels'));
     }
 
     public function store(Request $request)
@@ -31,7 +33,12 @@ class ContactController extends Controller
         $data = $request->all();
         $data['tel'] = $tel;
 
-        Contact::create($data);
+        $contact = Contact::create($data);
+
+        if ($request->has('channel_id')) {
+        $contact->channels()->sync($request->channel_id);
+        }
+
         return view('contact.thanks');
     }
 

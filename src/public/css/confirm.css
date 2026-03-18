@@ -45,6 +45,10 @@
     border-bottom: none;
 }
 
+.confirm-table__item {
+    list-style: none;
+}
+
 .confirm-form__button-group{
     display: flex;
     justify-content: center;
