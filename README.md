@@ -45,6 +45,10 @@ php artisan migrate
 
 php artisan db:seed
 
+### 9. ストレージのシンボリックリンクを作成（画像アップロード用）
+
+php artisan storage:link
+
 ### "The stream or file could not be opened"エラーが発生した場合
 
 srcディレクトリにあるstorageディレクトリに権限を設定

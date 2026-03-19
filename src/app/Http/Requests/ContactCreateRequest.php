@@ -34,6 +34,7 @@ class ContactCreateRequest extends FormRequest
             'address' => ['required', 'string', 'max:255'],
             'category_id' => ['required', 'exists:categories,id'],
             'detail' => ['required', 'string', 'max:120'],
+            'img_path' => ['nullable', 'image', 'max:2048'],
         ];
     }
 

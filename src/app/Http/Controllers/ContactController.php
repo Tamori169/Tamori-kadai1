@@ -19,6 +19,12 @@ class ContactController extends Controller
     public function confirm(ContactCreateRequest $request)
     {
         $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1', 'tel2', 'tel3', 'address', 'building', 'category_id', 'detail', 'channel_id']);
+
+        if ($request->hasFile('img_path')) {
+            $path = $request->file('img_path')->store('images', 'public');
+            $contact['img_path'] = $path;
+        }
+
         $category = Category::find($request->category_id);
         $channels = Channel::whereIn('id', $request->channel_id ?? [])->get();
 

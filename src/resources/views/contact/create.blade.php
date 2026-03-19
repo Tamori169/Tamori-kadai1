@@ -12,7 +12,7 @@
         <h1>Contact</h1>
     </div>
 
-    <form class="form" action="/confirm" method="post">
+    <form class="form" action="/confirm" method="post" enctype="multipart/form-data">
         @csrf
         <!-- 名前 -->
         <div class="form__group">
@@ -279,8 +279,7 @@
                 <div class="form__item--upload">
                     <input class="form__item-file"
                         type="file"
-                        name="img_path"
-                        value="{{ old('building', $data['building'] ?? '') }}">
+                        name="img_path">
                 </div>
             </div>
         </div>

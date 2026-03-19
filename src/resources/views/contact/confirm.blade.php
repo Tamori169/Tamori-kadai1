@@ -88,6 +88,15 @@
                         @endforeach
                     </td>
                 </tr>
+                <tr class="confirm-table__row">
+                    <td class="confirm-table__header">アップロード画像</td>
+                    <td class="confirm-table__text">
+                        @if (!empty($contact['img_path']))
+                            <img src="{{ asset('storage/' . $contact['img_path']) }}" alt="アップロード画像" width="200">
+                            <input type="hidden" name="img_path" value="{{ $contact['img_path'] }}">
+                        @endif
+                    </td>
+                </tr>
             </table>
         </div>
         <div class="confirm-form__button-group">
